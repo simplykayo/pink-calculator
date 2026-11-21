@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6a9ca">
+  <meta name="description" content="Pink Calculator — a glossy Y2K scientific calculator, currency converter and unit converter.">
+  <title>Pink Calculator ✦</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/history.js"></script>
+  <script defer src="js/calculator.js"></script>
+  <script defer src="js/currency.js"></script>
+  <script defer src="js/units.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <div class="sparkle sparkle-one">✦</div><div class="sparkle sparkle-two">✧</div><div class="sparkle sparkle-three">✦</div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pink Calculator home"><span class="brand-icon">✿</span><span>pink<span class="brand-light">calc</span></span></a>
+      <div class="top-actions">
+        <span class="live-pill"><i></i> READY TO GLOW</span>
+        <button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">A LITTLE MATH MAGIC</p><h1>Make it <span>count.</span></h1><p class="hero-sub">Your everyday numbers, with a little extra sparkle.</p></div>
+      <div class="hero-sticker" aria-hidden="true"><span>♥</span><small>100%<br>GIRL<br>MATH</small></div>
+    </section>
+
+    <nav class="tabs" aria-label="Calculator tools">
+      <button class="tab active" data-tab="calculator"><span>▦</span> Calculator</button>
+      <button class="tab" data-tab="currency"><span>＄</span> Currency</button>
+      <button class="tab" data-tab="units"><span>↔</span> Units</button>
+    </nav>
+
+    <section class="workspace">
+      <section class="tool-panel active" id="calculatorPanel">
+        <div class="calculator-layout">
+          <div class="calculator-card glass-card">
+            <div class="calc-topline"><span class="mini-label">SCIENTIFIC CALCULATOR</span><div class="mode-switch"><button id="angleMode" class="mode-btn">DEG</button><span>•</span><span>SCI</span></div></div>
+            <div class="display">
+              <div class="expression" id="expression" aria-label="Expression"> </div>
+              <div class="result" id="result" aria-live="polite">0</div>
+              <div class="display-tools"><button id="copyResult" class="tiny-action">▢ COPY</button><span id="calcStatus">LET'S DO THIS ✦</span></div>
+            </div>
+            <div class="memory-row">
+              <button data-memory="mc">MC</button><button data-memory="mr">MR</button><button data-memory="mplus">M+</button><button data-memory="mminus">M−</button><button data-memory="ms">MS</button>
+            </div>
+            <div class="keypad" id="keypad">
+              <button class="key function" data-value="sin(">sin</button><button class="key function" data-value="cos(">cos</button><button class="key function" data-value="tan(">tan</button><button class="key function" data-value="log(">log</button><button class="key function" data-value="ln(">ln</button>
+              <button class="key function" data-value="(">(</button><button class="key function" data-value=")">)</button><button class="key function" data-value="sqrt(">√</button><button class="key function" data-value="^">xʸ</button><button class="key function" data-value="!">x!</button>
+              <button class="key utility" data-action="clear">AC</button><button class="key utility" data-action="delete">⌫</button><button class="key function" data-value="%">%</button><button class="key operator" data-value="÷">÷</button><button class="key function" data-value="pi">π</button>
+              <button class="key number" data-value="7">7</button><button class="key number" data-value="8">8</button><button class="key number" data-value="9">9</button><button class="key operator" data-value="×">×</button><button class="key function" data-value="e">e</button>
+              <button class="key number" data-value="4">4</button><button class="key number" data-value="5">5</button><button class="key number" data-value="6">6</button><button class="key operator" data-value="−">−</button><button class="key function" data-value="asin(">sin⁻¹</button>
+              <button class="key number" data-value="1">1</button><button class="key number" data-value="2">2</button><button class="key number" data-value="3">3</button><button class="key operator" data-value="+">+</button><button class="key function" data-value="acos(">cos⁻¹</button>
+              <button class="key number zero" data-value="0">0</button><button class="key number" data-value=".">.</button><button class="key function" data-value="ans">Ans</button><button class="key equals" data-action="equals">=</button><button class="key function" data-value="atan(">tan⁻¹</button>
+            </div>
+          </div>
+          <aside class="side-column">
+            <div class="side-card glass-card history-card"><div class="side-heading"><div><p class="mini-label">YOUR TRAIL</p><h2>Recent magic</h2></div><button id="clearHistory" class="text-action">CLEAR</button></div><div id="historyList" class="history-list"><p class="empty-state">Your calculations will show up here ✧</p></div></div>
+            <div class="tip-card"><span class="tip-star">✦</span><p class="mini-label">PRO TIP</p><p>Use your keyboard for speedy calculations. Press <kbd>Enter</kbd> to solve and <kbd>Esc</kbd> to clear.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="tool-panel" id="currencyPanel">
+        <div class="converter-card glass-card">
+          <div class="section-heading"><div><p class="mini-label">AROUND THE WORLD</p><h2>Currency exchange <span>♡</span></h2><p>Quick conversions using published reference rates.</p></div><div class="round-sticker">₿<small>global<br>glam</small></div></div>
+          <div class="currency-converter">
+            <div class="currency-box"><label for="fromAmount">YOU HAVE</label><input id="fromAmount" type="number" min="0" step="any" value="1"><select id="fromCurrency" aria-label="From currency"></select></div>
+            <button id="swapCurrencies" class="swap-button" aria-label="Swap currencies">⇅</button>
+            <div class="currency-box"><label for="toAmount">YOU GET</label><input id="toAmount" type="text" readonly placeholder="—"><select id="toCurrency" aria-label="To currency"></select></div>
+          </div>
+          <div class="rate-line" id="rateLine">Choose currencies to see the latest available rate.</div>
+          <div class="currency-footer"><span id="rateStatus">Rates load when you open this tab.</span><button id="refreshRates" class="outline-button">↻ REFRESH RATES</button></div>
+          <div class="quick-amounts"><span>TRY AN AMOUNT</span><button data-amount="10">10</button><button data-amount="50">50</button><button data-amount="100">100</button><button data-amount="500">500</button><button data-amount="1000">1,000</button></div>
+          <p class="disclaimer">Rates are informational reference rates, not guaranteed bank or card transaction prices. Internet connection required for a fresh quote.</p>
+        </div>
+      </section>
+
+      <section class="tool-panel" id="unitsPanel">
+        <div class="converter-card glass-card">
+          <div class="section-heading"><div><p class="mini-label">SWITCH IT UP</p><h2>Unit converter <span>✧</span></h2><p>Little conversions, big convenience.</p></div><div class="round-sticker">↔<small>convert<br>anything</small></div></div>
+          <div class="unit-controls"><label class="field-label" for="unitCategory">CATEGORY</label><select id="unitCategory" class="wide-select"><option value="length">Length</option><option value="weight">Weight / Mass</option><option value="temperature">Temperature</option><option value="area">Area</option><option value="volume">Volume</option><option value="speed">Speed</option><option value="time">Time</option><option value="data">Digital storage</option><option value="pressure">Pressure</option><option value="energy">Energy</option><option value="power">Power</option></select></div>
+          <div class="unit-converter">
+            <div class="unit-box"><label for="unitInput">FROM</label><input id="unitInput" type="number" value="1" step="any"><select id="unitFrom"></select></div>
+            <button id="swapUnits" class="swap-button" aria-label="Swap units">⇅</button>
+            <div class="unit-box"><label for="unitOutput">TO</label><input id="unitOutput" type="text" readonly><select id="unitTo"></select></div>
+          </div>
+          <div class="unit-result" id="unitFormula">Select a category to get started ✦</div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer"><span>MADE WITH <b>♥</b> AND A LITTLE MATH</span><span>pinkcalc © <span id="year"></span></span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
