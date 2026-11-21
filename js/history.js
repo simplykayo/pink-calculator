@@ -1,3 +1,5 @@
+/* Keeps a short list of calculations on this device. */
+
 (() => {
   const KEY = "history";
   const read = () => window.PinkStorage.get(KEY, []);
