@@ -1,3 +1,5 @@
+/* Unit conversion factors and temperature formulas. */
+
 (() => {
   const data = {
     length:{m:"Meter",km:"Kilometer",cm:"Centimeter",mm:"Millimeter",mi:"Mile",yd:"Yard",ft:"Foot",in:"Inch",nmi:"Nautical mile"},
