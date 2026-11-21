@@ -1,1 +1,150 @@
-@media(max-width:800px){.calculator-layout{grid-template-columns:1fr}.side-column{grid-template-columns:1fr 1fr}.history-list{max-height:180px}.hero{padding-top:35px}.calculator-card{padding:18px}}@media(max-width:560px){.app-shell{width:min(100% - 24px,480px);padding-top:15px}.hero{padding:35px 3px 24px}.hero-sticker{width:76px;height:76px}.hero h1{font-size:42px}.hero-sub{font-size:12px;max-width:250px}.tabs{gap:3px}.tab{padding:10px 11px;font-size:11px}.calculator-card{padding:13px;border-radius:18px}.keypad{gap:6px}.key{min-height:43px;border-radius:10px}.key.function{font-size:10px}.side-column{grid-template-columns:1fr}.side-card{padding:15px}.history-list{max-height:160px}.tip-card{padding:15px 18px}.converter-card{padding:20px 14px;border-radius:18px}.section-heading{margin-bottom:22px}.round-sticker{width:60px;height:60px}.currency-converter,.unit-converter{grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:7px}.currency-box,.unit-box{padding:11px 9px}.currency-box input,.unit-box input{font-size:19px}.currency-box select,.unit-box select{font-size:10px;padding:8px 4px}.swap-button{width:34px;height:34px;font-size:19px}.currency-footer{align-items:flex-start;flex-direction:column}.quick-amounts{gap:6px}.quick-amounts span{width:100%}.footer{font-size:7px}.sparkle-one{left:1%}.sparkle-two{right:1%}}@media(max-width:360px){.hero h1{font-size:36px}.hero-sticker{width:65px;height:65px}.key{min-height:39px;font-size:13px}.key.function{font-size:9px}.keypad{gap:5px}.memory-row{gap:4px}.memory-row button{font-size:8px}.currency-box input,.unit-box input{font-size:16px}}
+@media(max-width:800px) {
+  .calculator-layout {
+  grid-template-columns:1fr
+}
+.side-column {
+  grid-template-columns:1fr 1fr
+}
+.history-list {
+  max-height:180px
+}
+.hero {
+  padding-top:35px
+}
+.calculator-card {
+  padding:18px
+}
+
+}
+@media(max-width:560px) {
+  .app-shell {
+  width:min(100% - 24px,480px);
+  padding-top:15px
+}
+.hero {
+  padding:35px 3px 24px
+}
+.hero-sticker {
+  width:76px;
+  height:76px
+}
+.hero h1 {
+  font-size:42px
+}
+.hero-sub {
+  font-size:12px;
+  max-width:250px
+}
+.tabs {
+  gap:3px
+}
+.tab {
+  padding:10px 11px;
+  font-size:11px
+}
+.calculator-card {
+  padding:13px;
+  border-radius:18px
+}
+.keypad {
+  gap:6px
+}
+.key {
+  min-height:43px;
+  border-radius:10px
+}
+.key.function {
+  font-size:10px
+}
+.side-column {
+  grid-template-columns:1fr
+}
+.side-card {
+  padding:15px
+}
+.history-list {
+  max-height:160px
+}
+.tip-card {
+  padding:15px 18px
+}
+.converter-card {
+  padding:20px 14px;
+  border-radius:18px
+}
+.section-heading {
+  margin-bottom:22px
+}
+.round-sticker {
+  width:60px;
+  height:60px
+}
+.currency-converter,.unit-converter {
+  grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);
+  gap:7px
+}
+.currency-box,.unit-box {
+  padding:11px 9px
+}
+.currency-box input,.unit-box input {
+  font-size:19px
+}
+.currency-box select,.unit-box select {
+  font-size:10px;
+  padding:8px 4px
+}
+.swap-button {
+  width:34px;
+  height:34px;
+  font-size:19px
+}
+.currency-footer {
+  align-items:flex-start;
+  flex-direction:column
+}
+.quick-amounts {
+  gap:6px
+}
+.quick-amounts span {
+  width:100%
+}
+.footer {
+  font-size:7px
+}
+.sparkle-one {
+  left:1%
+}
+.sparkle-two {
+  right:1%
+}
+
+}
+@media(max-width:360px) {
+  .hero h1 {
+  font-size:36px
+}
+.hero-sticker {
+  width:65px;
+  height:65px
+}
+.key {
+  min-height:39px;
+  font-size:13px
+}
+.key.function {
+  font-size:9px
+}
+.keypad {
+  gap:5px
+}
+.memory-row {
+  gap:4px
+}
+.memory-row button {
+  font-size:8px
+}
+.currency-box input,.unit-box input {
+  font-size:16px
+}
+
+}
