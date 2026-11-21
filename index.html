@@ -25,14 +25,14 @@
     <header class="topbar">
       <a class="brand" href="#" aria-label="Pink Calculator home"><span class="brand-icon">✿</span><span>pink<span class="brand-light">calc</span></span></a>
       <div class="top-actions">
-        <span class="live-pill"><i></i> READY TO GLOW</span>
+        <span class="live-pill"><i></i> ALL SET</span>
         <button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
       </div>
     </header>
 
     <section class="hero">
-      <div class="hero-copy"><p class="eyebrow">A LITTLE MATH MAGIC</p><h1>Make it <span>count.</span></h1><p class="hero-sub">Your everyday numbers, with a little extra sparkle.</p></div>
-      <div class="hero-sticker" aria-hidden="true"><span>♥</span><small>100%<br>GIRL<br>MATH</small></div>
+      <div class="hero-copy"><p class="eyebrow">CALCULATOR · CONVERTERS · TOOLS</p><h1>Make it <span>count.</span></h1><p class="hero-sub">A calculator for everyday sums and quick conversions.</p></div>
+      <div class="hero-sticker" aria-hidden="true"><span>♥</span><small>PINK<br>EDITION</small></div>
     </section>
 
     <nav class="tabs" aria-label="Calculator tools">
@@ -49,7 +49,7 @@
             <div class="display">
               <div class="expression" id="expression" aria-label="Expression"> </div>
               <div class="result" id="result" aria-live="polite">0</div>
-              <div class="display-tools"><button id="copyResult" class="tiny-action">▢ COPY</button><span id="calcStatus">LET'S DO THIS ✦</span></div>
+              <div class="display-tools"><button id="copyResult" class="tiny-action">▢ COPY</button><span id="calcStatus">READY</span></div>
             </div>
             <div class="memory-row">
               <button data-memory="mc">MC</button><button data-memory="mr">MR</button><button data-memory="mplus">M+</button><button data-memory="mminus">M−</button><button data-memory="ms">MS</button>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <aside class="side-column">
-            <div class="side-card glass-card history-card"><div class="side-heading"><div><p class="mini-label">YOUR TRAIL</p><h2>Recent magic</h2></div><button id="clearHistory" class="text-action">CLEAR</button></div><div id="historyList" class="history-list"><p class="empty-state">Your calculations will show up here ✧</p></div></div>
+            <div class="side-card glass-card history-card"><div class="side-heading"><div><p class="mini-label">YOUR TRAIL</p><h2>Recent calculations</h2></div><button id="clearHistory" class="text-action">CLEAR</button></div><div id="historyList" class="history-list"><p class="empty-state">Calculations you make will appear here.</p></div></div>
             <div class="tip-card"><span class="tip-star">✦</span><p class="mini-label">PRO TIP</p><p>Use your keyboard for speedy calculations. Press <kbd>Enter</kbd> to solve and <kbd>Esc</kbd> to clear.</p></div>
           </aside>
         </div>
@@ -81,14 +81,14 @@
           </div>
           <div class="rate-line" id="rateLine">Choose currencies to see the latest available rate.</div>
           <div class="currency-footer"><span id="rateStatus">Rates load when you open this tab.</span><button id="refreshRates" class="outline-button">↻ REFRESH RATES</button></div>
-          <div class="quick-amounts"><span>TRY AN AMOUNT</span><button data-amount="10">10</button><button data-amount="50">50</button><button data-amount="100">100</button><button data-amount="500">500</button><button data-amount="1000">1,000</button></div>
+          <div class="quick-amounts"><span>QUICK AMOUNTS</span><button data-amount="10">10</button><button data-amount="50">50</button><button data-amount="100">100</button><button data-amount="500">500</button><button data-amount="1000">1,000</button></div>
           <p class="disclaimer">Rates are informational reference rates, not guaranteed bank or card transaction prices. Internet connection required for a fresh quote.</p>
         </div>
       </section>
 
       <section class="tool-panel" id="unitsPanel">
         <div class="converter-card glass-card">
-          <div class="section-heading"><div><p class="mini-label">SWITCH IT UP</p><h2>Unit converter <span>✧</span></h2><p>Little conversions, big convenience.</p></div><div class="round-sticker">↔<small>convert<br>anything</small></div></div>
+          <div class="section-heading"><div><p class="mini-label">SWITCH IT UP</p><h2>Unit converter <span>✧</span></h2><p>Convert common units without leaving the page.</p></div><div class="round-sticker">↔<small>convert<br>anything</small></div></div>
           <div class="unit-controls"><label class="field-label" for="unitCategory">CATEGORY</label><select id="unitCategory" class="wide-select"><option value="length">Length</option><option value="weight">Weight / Mass</option><option value="temperature">Temperature</option><option value="area">Area</option><option value="volume">Volume</option><option value="speed">Speed</option><option value="time">Time</option><option value="data">Digital storage</option><option value="pressure">Pressure</option><option value="energy">Energy</option><option value="power">Power</option></select></div>
           <div class="unit-converter">
             <div class="unit-box"><label for="unitInput">FROM</label><input id="unitInput" type="number" value="1" step="any"><select id="unitFrom"></select></div>
@@ -99,7 +99,7 @@
         </div>
       </section>
     </section>
-    <footer class="footer"><span>MADE WITH <b>♥</b> AND A LITTLE MATH</span><span>pinkcalc © <span id="year"></span></span></footer>
+    <footer class="footer"><span>MADE WITH <b>♥</b> IN THE BROWSER</span><span>pinkcalc © <span id="year"></span></span></footer>
   </main>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
