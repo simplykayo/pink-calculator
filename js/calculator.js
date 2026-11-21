@@ -1,3 +1,5 @@
+/* Calculator input, expression parsing and scientific functions. */
+
 (() => {
   const $ = id => document.getElementById(id);
   let expression = "", answer = 0, memory = 0, degrees = true;
