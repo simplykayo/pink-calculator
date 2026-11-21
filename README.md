@@ -1,43 +1,53 @@
-# Pink Calculator ✿
+# Pink Calculator
 
-A glossy Y2K-inspired calculator with scientific functions, currency exchange and unit conversion. Built with plain HTML, CSS and JavaScript—no build step or framework required.
+A browser calculator with a pink, early-2000s-inspired look. It includes a scientific keypad, a currency converter and a unit converter. The site is static, so there is no package install or build step.
 
-## Features
+## What it can do
 
-- **Scientific calculator:** arithmetic, parentheses, powers, roots, factorials, trigonometry, inverse trigonometry, logarithms, constants, percent/modulo, DEG/RAD mode, answer memory and MC/MR/M+/M−/MS.
-- **Keyboard support:** type expressions, press Enter to calculate, Backspace to delete and Escape to clear.
-- **Calculation history:** recent results are stored locally in your browser.
-- **Currency converter:** a broad currency list with reference rates from the Frankfurter API. Rates are fetched when the Currency tab is opened and can be refreshed.
-- **Unit converter:** length, mass, temperature, area, volume, speed, time, digital storage, pressure, energy and power.
-- **Preferences:** dark mode and history are saved locally.
-- **Responsive design:** desktop, tablet and mobile layouts.
+- Handle arithmetic, brackets, powers, roots and factorials.
+- Calculate trigonometric functions in degrees or radians, plus inverse trig and logarithms.
+- Keep recent calculations in the browser.
+- Convert between the currencies listed in the Currency tab.
+- Convert length, mass, temperature, area, volume, speed, time, digital storage, pressure, energy and power.
+- Remember the colour theme and the last saved currency rate on this device.
+
+In the calculator, press **Enter** to calculate, **Backspace** to remove the last character and **Escape** to clear the display.
 
 ## Run locally
 
-Open `index.html` in a browser, or use the VS Code Live Server extension. No installation or build command is needed.
+Clone or download the repository and open `index.html` in a browser. If you're working in VS Code, the Live Server extension is a handy way to preview changes.
 
-## Deploy to Cloudflare Pages
+There are no dependencies to install.
 
-1. Open **Cloudflare Dashboard → Workers & Pages**.
-2. Choose **Create application → Pages → Connect to Git**.
-3. Select this GitHub repository.
-4. Set the production branch to `main`.
-5. Choose **None** as the framework preset.
-6. Leave the build command empty.
-7. Set the build output directory to `/`.
-8. Save and deploy.
+## Deploy with Cloudflare Pages
 
-Every push to `main` will trigger a new deployment.
+Connect this GitHub repository to Cloudflare Pages and use these settings:
 
-## Currency data
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Framework preset | `None` |
+| Build command | Leave blank |
+| Build output directory | `/` |
 
-Currency rates are supplied by [Frankfurter](https://www.frankfurter.dev/), an API for reference exchange rates. These are informational published rates and may not match bank, card, or money-transfer prices. A previously fetched rate may be used as an explicitly labelled offline fallback.
+Once the first deployment is complete, new commits to `main` will trigger another deployment.
 
-## Notes
+## Exchange rates
 
-- Calculator expressions are parsed locally; they are not sent to a server.
-- Unit conversions run locally in the browser.
-- History, theme preference and cached reference rates are stored in local browser storage.
-- Google Fonts are loaded from Google Fonts when internet access is available; the interface falls back to system fonts otherwise.
+The currency tab gets rates from [Frankfurter](https://www.frankfurter.dev/). These are published reference rates, not live trading prices. Your bank, card provider or transfer service may use a different rate and charge fees. If the rate service is unavailable, the app can show a previously saved rate and labels it as an offline fallback.
 
-Made with ♥ and a little math.
+## Project layout
+
+- `index.html` — page structure and calculator layout
+- `css/` — main and responsive styles
+- `js/calculator.js` — expression parsing and calculation
+- `js/currency.js` — exchange-rate lookup and conversion
+- `js/units.js` — unit conversion values and logic
+- `js/history.js` and `js/storage.js` — calculation history and local preferences
+- `assets/` — browser icon
+
+Calculations and unit conversions happen in the browser. History, theme preference and the cached exchange rate are stored in local storage on the device.
+
+---
+
+Made for the browser, with a little pink.
