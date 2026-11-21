@@ -1,3 +1,5 @@
+/* Currency conversion using published reference rates. */
+
 (() => {
   const currencies = {INR:"Indian Rupee",USD:"US Dollar",EUR:"Euro",GBP:"British Pound",JPY:"Japanese Yen",AUD:"Australian Dollar",CAD:"Canadian Dollar",CHF:"Swiss Franc",CNY:"Chinese Yuan",SGD:"Singapore Dollar",AED:"UAE Dirham",NZD:"New Zealand Dollar",KRW:"South Korean Won",THB:"Thai Baht",SAR:"Saudi Riyal",HKD:"Hong Kong Dollar",BRL:"Brazilian Real",ZAR:"South African Rand",MXN:"Mexican Peso",SEK:"Swedish Krona",NOK:"Norwegian Krone",DKK:"Danish Krone",TRY:"Turkish Lira",IDR:"Indonesian Rupiah",MYR:"Malaysian Ringgit",PHP:"Philippine Peso",PLN:"Polish Zloty",CZK:"Czech Koruna",HUF:"Hungarian Forint",ILS:"Israeli New Shekel"};
   const $=id=>document.getElementById(id); let rates={},base="",updated="",loading=false;
