@@ -1,3 +1,5 @@
+/* Small local-storage helpers used by the other modules. */
+
 (() => {
   const PREFIX = "pinkcalc_";
   window.PinkStorage = {
