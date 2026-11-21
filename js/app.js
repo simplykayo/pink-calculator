@@ -1,3 +1,5 @@
+/* Navigation, theme preference and small interface helpers. */
+
 (() => {
   const $=id=>document.getElementById(id); let toastTimer;
   function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2200);}
